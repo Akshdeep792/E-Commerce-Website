@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedStore | Cart</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+    </style>
+    
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/1a0fa50a54.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+
+
+    <!-- Header -->
+   
+<div class="container">
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="images/logo.png" width="125px">
+        </div>
+        <nav>
+            <ul id="Menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="account.html">Account</a></li>
+            </ul>
+        </nav>
+        <a href="shoppingcart.html"><img src="images/cart.png" width="30px" height="30px"></img></a>
+        <img src="images/menu.png" class="menu" onclick="menutoggle()">
+    </div>
+</div>
+
+<!-- ------cart item details--------- -->
+
+<div class="small-container cart-page">
+    <table>
+        <tr>
+            <th>Products</th>
+            <th>Quantity</th>
+            <th>Sub Totol</th>
+        </tr>
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="images/buy-1.jpg" alt="">
+                    <div>
+                        <p>Red Printed T-shirt</p>
+                        <small>Price: $50.00</small>
+                        <br>
+                        <a href="">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1"></td>
+            <td>$50.00</td>
+        </tr>
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="images/buy-2.jpg" alt="">
+                    <div>
+                        <p>Red Printed T-shirt</p>
+                        <small>Price: $45.00</small>
+                        <br>
+                        <a href="">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1"></td>
+            <td>$50.00</td>
+        </tr>
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="images/buy-3.jpg" alt="">
+                    <div>
+                        <p>Red Printed T-shirt</p>
+                        <small>Price: $75.00</small>
+                        <br>
+                        <a href="">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1"></td>
+            <td>$50.00</td>
+        </tr>
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="images/product-7.jpg" alt="">
+                    <div>
+                        <p>Red Printed T-shirt</p>
+                        <small>Price: $20.00</small>
+                        <br>
+                        <a href="">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1"></td>
+            <td>$50.00</td>
+        </tr>
+    </table>
+
+    <div class="total-price">
+        <table>
+            <tr>
+                <td>SubTotal</td>
+                <td>$190.00</td>
+            </tr>
+            <tr>
+                <td>Tax</td>
+                <td>$10.00</td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td>$200.00</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- footer -->
+
+<div class="footer">
+    <div class="small-container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download Our App</h3>
+                <div class="down">
+                    <img src="images/play-store.png">
+                    <img src="images/app-store.png">
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="images/logo-white.png" >
+                <p>Our Purpose Is To Sustainably Make the Pleasure and Benefits of Sports Accessible to the Many. </p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li>Coupans</li>
+                    <li>Blog Post</li>
+                    <li>Return Policy</li>
+                    <li>Join Affiliate</li>
+                </ul>
+            </div>
+            <div class="footer-col-4">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Instagram</li>
+                    <li>Youtube</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">Copyright © 2021 RedStore Inc. All rights reserved.</p>
+    </div>
+</div>
+
+
+
+<!-- -------js------ -->
+
+<script>
+    var Menuitems = document.getElementById("Menu");
+
+    Menuitems.style.maxHeight="0px";
+    function menutoggle(){
+    if(Menuitems.style.maxHeight=="0px"){
+        Menuitems.style.maxHeight="250px";
+    }
+    else{
+        Menuitems.style.maxHeight="0px";
+    }
+
+}
+
+</script>
+
+
+</body>
+</html>
