@@ -69,10 +69,10 @@
                         <button type="submit" class="btn">Login</button>
                         <a href="">Forgot Password?</a>
                     </form>
-                    <form id="Reg">
-                        <input type="text" placeholder="Username">
-                        <input type="email" placeholder="Email">
-                        <input type="password" placeholder="Password">
+                    <form id="Reg" name="RegForm" method="POST">
+                        <input type="text" placeholder="Username" name="Username">
+                        <input type="email" placeholder="Email" name="Email">
+                        <input type="password" placeholder="Password" name="Password">
                         <button type="submit" class="btn">Register</button>
                     </form>
                 </div>
@@ -170,6 +170,20 @@
 
     }
 
+</script>
+
+
+<!-- Js for data collection -->
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbw2_AVHiVSG9-_g-kCC_VRDNas-Gxwzbm58TpkkauXhME6eyZDRvjeFSULpKjXLVfDx/exec'
+            const form = document.forms['RegForm']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thanks for Registring"))
+                .catch(error => console.error('Error!', error.message))
+            })
 </script>
 
 </body>
